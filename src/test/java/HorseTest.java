@@ -79,8 +79,8 @@ public class HorseTest {
             Horse myHorse = new Horse("testName",speedTest,distanceTest);
             myHorse.move();
 
-            testHorse.when(() -> Horse.getRandomDouble(0.2, 0.9)).thenReturn(myHorse.getDistance());
-            assertEquals(myHorse.getDistance(), Horse.getRandomDouble(0.2, 0.9));
+            testHorse.when(() -> Horse.getRandomDouble(0.2, 0.9)).thenReturn(100.0);
+            assertEquals(100.0, Horse.getRandomDouble(0.2, 0.9));
         }
     }
 
